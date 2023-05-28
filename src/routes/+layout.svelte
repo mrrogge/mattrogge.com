@@ -31,7 +31,7 @@
         <p class="text-4xl font-extrabold text-primary">MATT ROGGE</p>
         <ul class="menu menu-horizontal rounded-box">
             <li><a href="/" class="link">ABOUT</a></li>
-            <li><a href="/" class="link">PROJECTS</a></li>
+            <li><a href="/projects" class="link">PROJECTS</a></li>
             <li><a href="/" class="link">BLOG</a></li>
             <li><a href="/" class="link">MUSIC</a></li>
         </ul>
