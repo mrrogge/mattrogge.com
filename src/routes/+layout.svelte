@@ -9,11 +9,11 @@
 
 <div
 	data-theme={$darkModeEnabled ? 'mrr_dark' : 'light'}
-	class="bg-[url('/src/lib/img/industry-collage/industry-collage-dimmed.png')] bg-[length:40%]"
+	class="bg-zinc-800"
 >
 	<!-- Page container -->
 	<div class="flex flex-row min-h-screen justify-center">
-		<div class="w-11/12 m-10 p-10 bg-[#080808]">
+		<div>
 			<slot />
 		</div>
 	</div>
