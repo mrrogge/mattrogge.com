@@ -3,7 +3,7 @@
 	import '../app.css';
 	import { setContext } from 'svelte';
 
-	const darkModeEnabled = writable(true);
+	const darkModeEnabled = writable(false);
 	setContext('darkModeEnabled', darkModeEnabled);
 </script>
 

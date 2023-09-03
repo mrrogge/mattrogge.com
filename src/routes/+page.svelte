@@ -2,7 +2,7 @@
 </script>
 
 <div class="flex-1">
-	<div class="flex flex-row justify-center pt-24 pb-24 bg-[url('/src/lib/img/industry.jpg')] bg-cover bg-top">
+	<div class="flex flex-row justify-center pt-24 pb-24 bg-[url('/src/lib/img/winter-city-view.png')] bg-cover bg-top">
 		<div class="flex flex-col justify-between pt-2">
 			<div class="flex-1" />
 			<div class="border-t" />
