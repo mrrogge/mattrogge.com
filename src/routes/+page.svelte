@@ -1,4 +1,13 @@
 <script lang="ts">
+	const skillMatrixWidth = 100;
+	const skillMatrixHeight = skillMatrixWidth * 0.8;
+	const skillMatrixX1 = (2 / 3) * skillMatrixWidth;
+	const skillMatrixY2 = (2 / 3) * skillMatrixHeight;
+	const skillMatrixX2 =
+		skillMatrixY2 / Math.tan(Math.PI / 2 - Math.atan(skillMatrixX1 / skillMatrixHeight));
+	console.log(
+		`${skillMatrixWidth}, ${skillMatrixHeight}, ${skillMatrixX1}, ${skillMatrixY2}, ${skillMatrixX2}`
+	);
 </script>
 
 <div class="flex-1 flex flex-col">
@@ -55,5 +64,24 @@
 			</svg>
 			<div class="text-2xl">Minneapolis, MN</div>
 		</div>
+	</div>
+	<div class="p-16 flex flex-col gap-2 border">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="50%"
+			height="auto"
+			fill="currentColor"
+			viewBox={`0 0 ${skillMatrixWidth} ${skillMatrixHeight}`}
+		>
+			<rect fill="blue" width={skillMatrixWidth} height={skillMatrixHeight} />
+			<path
+				fill="red"
+				d={`M 0 0 L ${skillMatrixX1} ${skillMatrixHeight} L 0 ${skillMatrixHeight} L 0 0`}
+			/>
+			<path
+				fill="yellow"
+				d={`M 0 0 L ${skillMatrixWidth} 0 L ${skillMatrixX2} ${skillMatrixY2} L 0 0 `}
+			/>
+		</svg>
 	</div>
 </div>
