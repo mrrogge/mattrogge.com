@@ -13,9 +13,7 @@
 >
 	<!-- Page container -->
 	<div class="flex flex-row min-h-screen justify-center">
-		<div>
-			<slot />
-		</div>
+		<slot />
 	</div>
 
 	<!-- Side buttons -->
