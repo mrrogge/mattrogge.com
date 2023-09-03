@@ -5,9 +5,8 @@
 	const skillMatrixY2 = (2 / 3) * skillMatrixHeight;
 	const skillMatrixX2 =
 		skillMatrixY2 / Math.tan(Math.PI / 2 - Math.atan(skillMatrixX1 / skillMatrixHeight));
-	console.log(
-		`${skillMatrixWidth}, ${skillMatrixHeight}, ${skillMatrixX1}, ${skillMatrixY2}, ${skillMatrixX2}`
-	);
+
+	let selectedSkill: 1 | 2 | 3 = 1;
 </script>
 
 <div class="flex-1 flex flex-col">
@@ -72,15 +71,50 @@
 			height="auto"
 			fill="currentColor"
 			viewBox={`0 0 ${skillMatrixWidth} ${skillMatrixHeight}`}
+			on:click={() => console.log('clicked')}
+			on:keydown={() => console.log('keydown')}
 		>
-			<rect fill="blue" width={skillMatrixWidth} height={skillMatrixHeight} />
 			<path
-				fill="red"
+				class=" fill-slate-600 [&.skillSelected]:fill-rose-400 hover:fill-rose-200"
+				class:skillSelected={selectedSkill === 1}
+				stroke="white"
+				stroke-opacity=1
+				stroke-width=1
 				d={`M 0 0 L ${skillMatrixX1} ${skillMatrixHeight} L 0 ${skillMatrixHeight} L 0 0`}
+				on:click={() => {
+					selectedSkill = 1;
+				}}
+				on:keydown={() => {
+					selectedSkill = 1;
+				}}
 			/>
 			<path
-				fill="yellow"
+				class="fill-slate-600 [&.skillSelected]:fill-teal-400 hover:fill-teal-200"
+				class:skillSelected={selectedSkill === 2}
+				stroke="white"
+				stroke-opacity=1
+				stroke-width=1
 				d={`M 0 0 L ${skillMatrixWidth} 0 L ${skillMatrixX2} ${skillMatrixY2} L 0 0 `}
+				on:click={() => {
+					selectedSkill = 2;
+				}}
+				on:keydown={() => {
+					selectedSkill = 2;
+				}}
+			/>
+			<path
+				class="fill-slate-600 hover:fill-blue-200 [&.skillSelected]:fill-blue-400"
+				class:skillSelected={selectedSkill === 3}
+				stroke="white"
+				stroke-opacity=1
+				stroke-width=1
+				d={`M ${skillMatrixWidth} 0 L ${skillMatrixX2} ${skillMatrixY2} L ${skillMatrixX1} ${skillMatrixHeight} L ${skillMatrixWidth} ${skillMatrixHeight} L ${skillMatrixWidth} 0`}
+				on:click={() => {
+					selectedSkill = 3;
+				}}
+				on:keydown={() => {
+					selectedSkill = 3;
+				}}
 			/>
 		</svg>
 	</div>
