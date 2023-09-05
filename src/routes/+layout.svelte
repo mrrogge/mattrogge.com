@@ -17,15 +17,14 @@
 	</div>
 
 	<!-- Side buttons -->
-	<ul class="fixed top-1/2 menu menu-vertical justify-center bg-blue-950 rounded-r-box">
-		<li>
+	<ul class="fixed top-1/2 menu menu-vertical justify-center bg-sky-800 text-slate-50 rounded-r-box">
+		<li class="hover:bg-sky-200 hover:text-slate-900">
 			<a href="https://www.linkedin.com/in/mrogge/">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
 					fill="currentColor"
-					class="bi bi-linkedin"
 					viewBox="0 0 16 16"
 				>
 					<path
@@ -34,7 +33,7 @@
 				</svg>
 			</a>
 		</li>
-		<li>
+		<li class="hover:bg-sky-200 hover:text-slate-900">
 			<a href="https://github.com/mrrogge">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
