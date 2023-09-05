@@ -107,10 +107,16 @@
 					{#each langs as langEntry}
 					<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1 bg-">
 						<div class="p-1 font-mono">{langEntry.lang}</div>
-						<div class="border-l border-slate-600 rounded-r-lg p-1"
-						class:bg-yellow-400={langEntry.level === "EXPERT"}
-						class:bg-blue-300={langEntry.level === "INTERMEDIATE"}
-						class:bg-indigo-300={langEntry.level === "DABBLED"}
+						<div class="border-l border-slate-600 rounded-r-lg p-1 bg-gradient-to-r"
+						class:from-yellow-400={langEntry.level === "EXPERT"}
+						class:via-yellow-100={langEntry.level === "EXPERT"}
+						class:to-yellow-400={langEntry.level === "EXPERT"}
+						class:from-blue-300={langEntry.level === "INTERMEDIATE"}
+						class:via-blue-100={langEntry.level === "INTERMEDIATE"}
+						class:to-blue-300={langEntry.level === "INTERMEDIATE"}
+						class:from-indigo-300={langEntry.level === "DABBLED"}
+						class:via-indigo-100={langEntry.level === "DABBLED"}
+						class:to-indigo-300={langEntry.level === "DABBLED"}
 						>{langEntry.level}</div>
 					</div>
 					{/each}
