@@ -1,8 +1,11 @@
 <script lang="ts">
 	import type { SkillEntry } from '../skills';
+	import SkillBadge from './SkillBadge.svelte';
 	import SkillSelector from './SkillSelector.svelte';
 
 	let selectedSkill: 1 | 2 | 3 = 1;
+
+	const industrialSkills: readonly SkillEntry[] = [] as const;
 
 	const langs: readonly SkillEntry[] = [
 		{ desc: 'python', level: 'EXPERT' },
@@ -40,6 +43,12 @@
 					technologies. Aerospace, adhesive materials, food processing and packaging, fluid
 					handling...even pig farming!
 				</p>
+				<p class="text-lg">These are a few of the technologies I'm familiar with:</p>
+				<div class="flex flex-row flex-wrap gap-4">
+					{#each industrialSkills as skill}
+						<SkillBadge {skill} />
+					{/each}
+				</div>
 			{:else if selectedSkill === 2}
 				<div class="text-2xl">Programming: the pillar</div>
 				<p class="text-lg">
@@ -53,23 +62,7 @@
 				</p>
 				<div class="flex flex-row flex-wrap gap-4">
 					{#each langs as langEntry}
-						<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1 bg-">
-							<div class="p-1 font-mono">{langEntry.desc}</div>
-							<div
-								class="border-l border-slate-600 rounded-r-lg p-1 bg-gradient-to-r"
-								class:from-yellow-400={langEntry.level === 'EXPERT'}
-								class:via-yellow-100={langEntry.level === 'EXPERT'}
-								class:to-yellow-400={langEntry.level === 'EXPERT'}
-								class:from-blue-300={langEntry.level === 'INTERMEDIATE'}
-								class:via-blue-100={langEntry.level === 'INTERMEDIATE'}
-								class:to-blue-300={langEntry.level === 'INTERMEDIATE'}
-								class:from-indigo-300={langEntry.level === 'DABBLED'}
-								class:via-indigo-100={langEntry.level === 'DABBLED'}
-								class:to-indigo-300={langEntry.level === 'DABBLED'}
-							>
-								{langEntry.level}
-							</div>
-						</div>
+						<SkillBadge skill={langEntry} />
 					{/each}
 				</div>
 			{:else if selectedSkill === 3}
