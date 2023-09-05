@@ -6,16 +6,16 @@
 	let selectedSkill: 1 | 2 | 3 = 1;
 
 	const industrialSkills: readonly SkillEntry[] = [
-		{desc: 'PLC programming', level: 'EXPERT'},
-		{desc: 'HMI programming', level: 'EXPERT'},	
-		{desc: 'Control system design', level: 'INTERMEDIATE'},
-		{desc: 'Rockwell products', level: 'EXPERT'},
-		{desc: 'Siemens products', level: 'EXPERT'},
-		{desc: 'Mitsubishi/MELSEC products', level: 'DABBLED'},
-		{desc: 'Drive configuration', level: 'INTERMEDIATE'},
-		{desc: 'IA Ignition', level: 'EXPERT'},
-		{desc: 'B&R HMIs', level: 'EXPERT'},
-		{desc: 'SQL/DB administration', level: 'EXPERT'},
+		{ desc: 'PLC programming', level: 'EXPERT' },
+		{ desc: 'HMI programming', level: 'EXPERT' },
+		{ desc: 'Control system design', level: 'INTERMEDIATE' },
+		{ desc: 'Rockwell products', level: 'EXPERT' },
+		{ desc: 'Siemens products', level: 'EXPERT' },
+		{ desc: 'Mitsubishi/MELSEC products', level: 'DABBLED' },
+		{ desc: 'Drive configuration', level: 'INTERMEDIATE' },
+		{ desc: 'IA Ignition', level: 'EXPERT' },
+		{ desc: 'B&R HMIs', level: 'EXPERT' },
+		{ desc: 'SQL/DB administration', level: 'EXPERT' }
 	] as const;
 
 	const langs: readonly SkillEntry[] = [
@@ -36,11 +36,11 @@
 </script>
 
 <div class="p-16 flex flex-col gap-2 border">
-	<div class="flex flex-row justify-between gap-12">
-		<div class="relative flex-1">
+	<div class="flex flex-row justify-between align-top gap-12">
+		<div class="w-1/3">
 			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
 		</div>
-		<div class="flex-1 flex flex-col gap-4">
+		<div class="w-2/3 flex flex-col gap-4">
 			{#if selectedSkill === 1}
 				<div class="text-2xl">Industrial Automation: the catalyst</div>
 				<p class="text-lg">
@@ -59,6 +59,36 @@
 					{#each industrialSkills as skill}
 						<SkillBadge {skill} />
 					{/each}
+				</div>
+				<p class="text-lg">Here are some of my most notable projects and achievements:</p>
+				<div class="flex flex-row gap-2">
+					<div class="w-1/4">GRACO IND SDKs</div>
+					<div class="w-3/4">
+						<ul class="list-disc list-inside">
+							<li>
+								Spearheaded the Software Development Kit (SDK) project for integrators. These
+								provided standardized code blocks and examples for controlling Graco products over a
+								fieldbus connection (e.g. from a PLC). 6 different products are supported across
+								both Rockwell and Siemens PLCs. Research showed these saved integrators 2-6 weeks of development time per project.
+							</li>
+							<li>
+								Created a custom build system for reproducing SDKs deterministically. This CLI tool
+								used Rockwell's ACM console software to generate .ACD files from an ACM project.
+							</li>
+							<li>
+								Programmed a parser for Siemen's SCL language that generates human-friendly
+								documentation (think doxygen for PLCs).
+							</li>
+							<li>Led various trainings and demostrations, including two hour-long sessions at the Annual Integrator Symposium.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="flex flex-row gap-2">
+					<div class="w-1/4">GRACO CEO Award recipient 2021</div>
+					<div class="w-3/4">Given to those who demostrate high-quality work as recognized by their peers.</div>
+				</div>
+				<div class="flex flex-row gap-2">
+
 				</div>
 			{:else if selectedSkill === 2}
 				<div class="text-2xl">Programming: the pillar</div>
