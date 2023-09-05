@@ -1,7 +1,27 @@
 <script lang="ts">
-	import SkillSelector from "./SkillSelector.svelte";
+	import SkillSelector from './SkillSelector.svelte';
 
 	let selectedSkill: 1 | 2 | 3 = 1;
+
+	type ExperienceLevel = "EXPERT" | "INTERMEDIATE" | "DABBLED";
+	type LangEntry = {lang: string, level: ExperienceLevel};
+
+	const langs:readonly LangEntry[] = [
+		{lang: "python", level: "EXPERT"},
+		{lang: "javascript", level: "EXPERT"},
+		{lang: "lua", level: "EXPERT"},
+		{lang: "C", level: "INTERMEDIATE"},
+		{lang: "C++", level: "INTERMEDIATE"},
+		{lang: "haxe", level: "INTERMEDIATE"},
+		{lang: "rust", level: "INTERMEDIATE"},
+		{lang: "pascal", level: "EXPERT"},
+		{lang: "bash", level: "INTERMEDIATE"},
+		{lang: "elixir", level: "DABBLED"},
+		{lang: "go", level: "DABBLED"},
+		{lang: "haskell", level: "DABBLED"},
+		{lang: "scala", level: "DABBLED"}
+
+	] as const;
 </script>
 
 <div class="flex-1 flex flex-col">
@@ -59,9 +79,43 @@
 			<div class="text-2xl">Minneapolis, MN</div>
 		</div>
 	</div>
-	<div class="p-16 flex flex-col gap-2 border relative">
-		<div class="relative">
-			<SkillSelector selectedSkill={selectedSkill} onSelect={index => selectedSkill = index} />
+	<div class="p-16 flex flex-col gap-2 border">
+		<div class="flex flex-row justify-between gap-12">
+			<div class="relative flex-1">
+				<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
+			</div>
+			<div class="flex-1 flex flex-col gap-4">
+			{#if selectedSkill === 1}
+				<div class="text-2xl">Industrial Automation: the catalyst</div>
+				<p class="text-lg">
+					While studying electrical engineering at the University of Minnesota, I started my
+					controls engineering career as a co-op student with PaR Systems. This led to a full-time
+					position where I honed my skills in system design and PLC programming. 
+				</p>
+				<p class="text-lg">
+					I've had the pleasure of working on many fascinating industrial systems throughout my career thus far. I strive to cast a wide net, learning about a variety of applications and technologies. Aerospace, adhesive materials, food processing and packaging, fluid handling...even pig farming!
+				</p>
+				{:else if selectedSkill === 2}
+				<div class="text-2xl">Programming: the pillar</div>
+				<p class="text-lg">
+					Since my early childhood when I started writing BASIC on my mom's computer, I've been obsessed with programming! The feeling of solving a complex problem using beautifully-written and well-organized code...truthfully, I cannot get enough of it.
+				</p>
+				<p class="text-lg">
+					I've been called by my peers a "programming polyglot"; I've explored many different languages throughout the years
+				</p>
+				<div class="flex flex-row flex-wrap gap-4 justify-between">
+					{#each langs as langEntry}
+					<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1">
+						<div class="p-1">{langEntry.lang}</div>
+						<div class="border-l border-slate-600rounded-r-lg p-1"
+						class:bg-yellow-400={langEntry.level === "EXPERT"}
+						class:bg-blue-400={langEntry.level === "INTERMEDIATE"}
+						>{langEntry.level}</div>
+					</div>
+					{/each}
+				</div>
+				{/if}
+			</div>
 		</div>
 	</div>
 </div>
