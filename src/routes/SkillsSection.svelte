@@ -5,7 +5,18 @@
 
 	let selectedSkill: 1 | 2 | 3 = 1;
 
-	const industrialSkills: readonly SkillEntry[] = [] as const;
+	const industrialSkills: readonly SkillEntry[] = [
+		{desc: 'PLC programming', level: 'EXPERT'},
+		{desc: 'HMI programming', level: 'EXPERT'},	
+		{desc: 'Control system design', level: 'INTERMEDIATE'},
+		{desc: 'Rockwell products', level: 'EXPERT'},
+		{desc: 'Siemens products', level: 'EXPERT'},
+		{desc: 'Mitsubishi/MELSEC products', level: 'DABBLED'},
+		{desc: 'Drive configuration', level: 'INTERMEDIATE'},
+		{desc: 'IA Ignition', level: 'EXPERT'},
+		{desc: 'B&R HMIs', level: 'EXPERT'},
+		{desc: 'SQL/DB administration', level: 'EXPERT'},
+	] as const;
 
 	const langs: readonly SkillEntry[] = [
 		{ desc: 'python', level: 'EXPERT' },
@@ -43,7 +54,7 @@
 					technologies. Aerospace, adhesive materials, food processing and packaging, fluid
 					handling...even pig farming!
 				</p>
-				<p class="text-lg">These are a few of the technologies I'm familiar with:</p>
+				<p class="text-lg">These are a few of the technologies I'm most familiar with:</p>
 				<div class="flex flex-row flex-wrap gap-4">
 					{#each industrialSkills as skill}
 						<SkillBadge {skill} />
