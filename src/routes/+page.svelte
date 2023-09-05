@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SkillSelector from './SkillSelector.svelte';
 
-	let selectedSkill: 1 | 2 | 3 = 1;
+	let selectedSkill: 1 | 2 | 3 = 3;
 
 	type ExperienceLevel = "EXPERT" | "INTERMEDIATE" | "DABBLED";
 	type LangEntry = {lang: string, level: ExperienceLevel};
@@ -98,22 +98,28 @@
 				{:else if selectedSkill === 2}
 				<div class="text-2xl">Programming: the pillar</div>
 				<p class="text-lg">
-					Since my early childhood when I started writing BASIC on my mom's computer, I've been obsessed with programming! The feeling of solving a complex problem using beautifully-written and well-organized code...truthfully, I cannot get enough of it.
+					Since my early childhood when I started writing BASIC on my mom's computer, I've been obsessed with programming! There's nothing like solving a complex problem using beautifully-written and well-organized code.
 				</p>
 				<p class="text-lg">
-					I've been called by my peers a "programming polyglot"; I've explored many different languages throughout the years
+					My peers have called me a "programming polyglot" due to the many different languages I've explored:
 				</p>
-				<div class="flex flex-row flex-wrap gap-4 justify-between">
+				<div class="flex flex-row flex-wrap gap-4">
 					{#each langs as langEntry}
-					<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1">
-						<div class="p-1">{langEntry.lang}</div>
-						<div class="border-l border-slate-600rounded-r-lg p-1"
+					<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1 bg-">
+						<div class="p-1 font-mono">{langEntry.lang}</div>
+						<div class="border-l border-slate-600 rounded-r-lg p-1"
 						class:bg-yellow-400={langEntry.level === "EXPERT"}
-						class:bg-blue-400={langEntry.level === "INTERMEDIATE"}
+						class:bg-blue-300={langEntry.level === "INTERMEDIATE"}
+						class:bg-indigo-300={langEntry.level === "DABBLED"}
 						>{langEntry.level}</div>
 					</div>
 					{/each}
 				</div>
+				{:else if selectedSkill === 3}
+				<div class="text-2xl">Design: the glue</div>
+				<p class="text-lg">
+					Although not formally trained in design, I've learned a lot on job while designing HMIs, SCADA systems, and web/mobile frontends. My style tends to be pragmatic and functional, but I still like to keep it <span class="inline-block p-2 transform-gpu skew-x-12 -skew-y-3 italic font-mono font-semibold rounded-bl-xl rounded-tr-xl bg-gradient-to-r from-amber-300 to-sky-300 text-slate-950">fun</span>.
+				</p>
 				{/if}
 			</div>
 		</div>
