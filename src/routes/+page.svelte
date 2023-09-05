@@ -118,7 +118,7 @@
 				{:else if selectedSkill === 3}
 				<div class="text-2xl">Design: the glue</div>
 				<p class="text-lg">
-					Although not formally trained in design, I've learned a lot on job while designing HMIs, SCADA systems, and web/mobile frontends. My style tends to be pragmatic and functional, but I still like to keep it <span class="inline-block p-2 transform-gpu skew-x-12 -skew-y-3 italic font-mono font-semibold rounded-bl-xl rounded-tr-xl bg-gradient-to-r from-amber-300 to-sky-300 text-slate-950">fun</span>.
+					Learned through necessity; maintained through passion. While not formally trained in design, I've learned a lot on job designing HMIs, SCADA systems, and web/mobile frontends. My style tends to be pragmatic and functional, but I still like to keep it <span class="inline-block p-2 transform-gpu skew-x-12 -skew-y-3 italic font-mono font-semibold rounded-bl-xl rounded-tr-xl bg-gradient-to-r from-amber-300 to-sky-300 text-slate-950">fun</span>.
 				</p>
 				{/if}
 			</div>
