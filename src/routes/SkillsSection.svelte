@@ -1,25 +1,23 @@
 <script lang="ts">
+	import type { SkillEntry } from '../skills';
 	import SkillSelector from './SkillSelector.svelte';
 
 	let selectedSkill: 1 | 2 | 3 = 1;
 
-	type ExperienceLevel = 'EXPERT' | 'INTERMEDIATE' | 'DABBLED';
-	type LangEntry = { lang: string; level: ExperienceLevel };
-
-	const langs: readonly LangEntry[] = [
-		{ lang: 'python', level: 'EXPERT' },
-		{ lang: 'javascript', level: 'EXPERT' },
-		{ lang: 'lua', level: 'EXPERT' },
-		{ lang: 'C', level: 'INTERMEDIATE' },
-		{ lang: 'C++', level: 'INTERMEDIATE' },
-		{ lang: 'haxe', level: 'INTERMEDIATE' },
-		{ lang: 'rust', level: 'INTERMEDIATE' },
-		{ lang: 'pascal', level: 'EXPERT' },
-		{ lang: 'bash', level: 'INTERMEDIATE' },
-		{ lang: 'elixir', level: 'DABBLED' },
-		{ lang: 'go', level: 'DABBLED' },
-		{ lang: 'haskell', level: 'DABBLED' },
-		{ lang: 'scala', level: 'DABBLED' }
+	const langs: readonly SkillEntry[] = [
+		{ desc: 'python', level: 'EXPERT' },
+		{ desc: 'javascript', level: 'EXPERT' },
+		{ desc: 'lua', level: 'EXPERT' },
+		{ desc: 'C', level: 'INTERMEDIATE' },
+		{ desc: 'C++', level: 'INTERMEDIATE' },
+		{ desc: 'haxe', level: 'INTERMEDIATE' },
+		{ desc: 'rust', level: 'INTERMEDIATE' },
+		{ desc: 'pascal', level: 'EXPERT' },
+		{ desc: 'bash', level: 'INTERMEDIATE' },
+		{ desc: 'elixir', level: 'DABBLED' },
+		{ desc: 'go', level: 'DABBLED' },
+		{ desc: 'haskell', level: 'DABBLED' },
+		{ desc: 'scala', level: 'DABBLED' }
 	] as const;
 </script>
 
@@ -56,7 +54,7 @@
 				<div class="flex flex-row flex-wrap gap-4">
 					{#each langs as langEntry}
 						<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1 bg-">
-							<div class="p-1 font-mono">{langEntry.lang}</div>
+							<div class="p-1 font-mono">{langEntry.desc}</div>
 							<div
 								class="border-l border-slate-600 rounded-r-lg p-1 bg-gradient-to-r"
 								class:from-yellow-400={langEntry.level === 'EXPERT'}
