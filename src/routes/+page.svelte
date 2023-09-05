@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SkillSelector from './SkillSelector.svelte';
 
-	let selectedSkill: 1 | 2 | 3 = 3;
+	let selectedSkill: 1 | 2 | 3 = 1;
 
 	type ExperienceLevel = "EXPERT" | "INTERMEDIATE" | "DABBLED";
 	type LangEntry = {lang: string, level: ExperienceLevel};
