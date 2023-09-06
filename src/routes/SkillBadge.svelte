@@ -4,7 +4,7 @@
 	export let skill: SkillEntry;
 </script>
 
-<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1 bg-">
+<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1">
 	<div class="p-1 font-mono">{skill.desc}</div>
 	<div
 		class="border-l border-slate-600 rounded-r-lg p-1 bg-gradient-to-r"
