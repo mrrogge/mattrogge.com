@@ -1,4 +1,4 @@
-<div class="p-16 flex flex-col gap-2">
+<div class="p-16 flex flex-col gap-2 bg-zinc-100 drop-shadow-sm">
     <div class="flex flex-row text-slate-600 gap-2 align-middle">
         <svg
             xmlns="http://www.w3.org/2000/svg"
