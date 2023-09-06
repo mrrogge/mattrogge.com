@@ -4,10 +4,10 @@
 	export let skill: SkillEntry;
 </script>
 
-<div class="flex flex-row gap-1 border border-slate-600 rounded-lg pl-1">
+<div class="flex flex-row gap-1 bg-zinc-50 drop-shadow-sm border  rounded-lg pl-1">
 	<div class="p-1 font-mono">{skill.desc}</div>
 	<div
-		class="border-l border-slate-600 rounded-r-lg p-1 bg-gradient-to-r"
+		class="border-l border-slate-600 rounded-r-lg p-1 bg-gradient-to-r via-30%"
 		class:from-yellow-400={skill.level === 'EXPERT'}
 		class:via-yellow-100={skill.level === 'EXPERT'}
 		class:to-yellow-400={skill.level === 'EXPERT'}
