@@ -43,24 +43,24 @@
 		<div class="w-2/3 flex flex-col gap-4">
 			{#if selectedSkill === 1}
 				<div class="text-2xl">Industrial Automation: the catalyst</div>
-				<p class="text-lg">
+				<p>
 					While studying electrical engineering at the University of Minnesota, I started my
 					controls engineering career as a co-op student with PaR Systems. This led to a full-time
 					position where I honed my skills in system design and PLC programming.
 				</p>
-				<p class="text-lg">
+				<p>
 					I've had the pleasure of working on many fascinating industrial systems throughout my
 					career thus far. I strive to cast a wide net, learning about a variety of applications and
 					technologies. Aerospace, adhesive materials, food processing and packaging, fluid
 					handling...even pig farming!
 				</p>
-				<p class="text-lg">These are a few of the technologies I'm most familiar with:</p>
+				<p>These are a few of the technologies I'm most familiar with:</p>
 				<div class="flex flex-row flex-wrap gap-4">
 					{#each industrialSkills as skill}
 						<SkillBadge {skill} />
 					{/each}
 				</div>
-				<p class="text-lg">Here are some of my most notable projects and achievements:</p>
+				<p>Here are some of my most notable projects and achievements:</p>
 				<div class="flex flex-row gap-2">
 					<div class="w-1/4">GRACO IND SDKs</div>
 					<div class="w-3/4">
@@ -92,12 +92,12 @@
 				</div>
 			{:else if selectedSkill === 2}
 				<div class="text-2xl">Programming: the pillar</div>
-				<p class="text-lg">
+				<p>
 					Since my early childhood when I started writing BASIC on my mom's computer, I've been
 					obsessed with programming! There's nothing like solving a complex problem using
 					beautifully-written and well-organized code.
 				</p>
-				<p class="text-lg">
+				<p>
 					My peers have called me a "programming polyglot" due to the many different languages I've
 					explored:
 				</p>
@@ -108,7 +108,7 @@
 				</div>
 			{:else if selectedSkill === 3}
 				<div class="text-2xl">Design: the glue</div>
-				<p class="text-lg">
+				<p>
 					Learned through necessity; maintained through passion. While not formally trained in
 					design, I've learned a lot on job designing HMIs, SCADA systems, and web/mobile frontends.
 					My style tends to be pragmatic and functional, but I still like to keep it <span
