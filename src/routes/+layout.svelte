@@ -9,7 +9,7 @@
 
 <div
 	data-theme={$darkModeEnabled ? 'mrr_dark' : 'light'}
-	class="bg-zinc-100"
+	class="bg-zinc-200"
 >
 	<!-- Page container -->
 	<div class="flex flex-row min-h-screen justify-center">
