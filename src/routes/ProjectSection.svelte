@@ -7,14 +7,14 @@
 	<ProjectCard>
 		<div slot="image" class="flex flex-col">
 			<img src="src/lib/img/graco_logo.svg" alt="Graco logo" />
-			<div class="text-2xl text-center">SDK</div>
+			<div class="text-2xl text-center">Industrial SDKs</div>
 		</div>
 		<ul class="list-disc list-inside">
 			<li>
 				Spearheaded the Software Development Kit (SDK) project for integrators. These provide
 				standardized code blocks and examples for controlling Graco products over a fieldbus
 				connection (e.g. from a PLC). 6 different products are supported across both Rockwell and
-				Siemens PLCs. Research showed these saved integrators 2-6 weeks of development time per
+				Siemens PLCs. Research showed these saved integrators 2-6 weeks of commissioning time per
 				project.
 			</li>
 			<li>
@@ -26,7 +26,7 @@
 				(think doxygen for PLCs).
 			</li>
 			<li>
-				Led various trainings and demostrations, including two hour-long sessions at the Annual
+				Led various trainings and demonstrations, including two hour-long sessions at the Annual
 				Integrator Symposium.
 			</li>
 		</ul>
@@ -40,5 +40,27 @@
 			Given to a select group of employees who consistently demonstrate outstanding performance and
 			commitment to Graco's strategic initiatives.
 		</div>
+	</ProjectCard>
+	<ProjectCard>
+		<div slot="image">
+			<div class="text-3xl font-extrabold text-center">BW Systems, Inc.</div>
+		</div>
+		<div>
+		<p>
+			Delivered a complex customized MES solution for a food-industry plant with a 24/7 production
+			schedule.
+		</p>
+		<ul class="list-disc list-inside">
+			<li>
+				Consisted of: 6 Rockwell PLCs, 3 grinding lines, 7 packaging lines, and 17 HMI thin clients. Handled SCADA and data storage through IA Ignition and SQL Server DB.
+			</li>
+			<li>
+				Contributed heavily to a code library of ~70k lines consisting of python and SQL.
+			</li>
+			<li>
+				Coordinated project with customer during their facility relocation and ERP migration.
+			</li>
+		</ul>
+	</div>
 	</ProjectCard>
 </div>
