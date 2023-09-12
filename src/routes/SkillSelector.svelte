@@ -60,6 +60,7 @@
 			x={skillMatrixWidth / 2}
 			y={skillMatrixHeight / 4}
 			font-size="4"
+			font-family="monospace"
 			text-anchor="middle"
 			dominant-baseline="middle"
 			pointer-events="none">Programming</text
@@ -78,6 +79,7 @@
 			x={(skillMatrixWidth * 3) / 4}
 			y={(skillMatrixHeight * 2) / 3}
 			font-size="4"
+			font-family="serif"
 			text-anchor="middle"
 			dominant-baseline="middle"
 			pointer-events="none">Design</text
