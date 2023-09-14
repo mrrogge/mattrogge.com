@@ -37,10 +37,13 @@
 	] as const;
 </script>
 
-<div class="p-16 pt-6 mt-1 flex flex-col gap-6 border bg-zinc-100 rounded-md">
+<div class="p-16 pt-6 mt-1 flex flex-col gap-6 border bg-zinc-100 rounded-md text-slate-600">
 	<p class="text-4xl font-semibold text-center w-1/3">SKILLS</p>
+	<div class="md:hidden max-w-[450px]">
+		<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
+	</div>
 	<div class="flex flex-row justify-between align-top gap-12 min-h-[575px]">
-		<div class="w-1/3">
+		<div class="hidden md:block w-1/3 ">
 			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
 		</div>
 		<div class="w-2/3">
