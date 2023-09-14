@@ -7,7 +7,7 @@
 	setContext('darkModeEnabled', darkModeEnabled);
 </script>
 
-<div class="bg-slate-200">
+<div class="bg-slate-200 text-slate-600">
 	<slot />
 
 	<!-- Side buttons -->
