@@ -7,17 +7,13 @@
 	setContext('darkModeEnabled', darkModeEnabled);
 </script>
 
-<div
-	data-theme={$darkModeEnabled ? 'mrr_dark' : 'light'}
-	class="bg-zinc-200"
->
-	<!-- Page container -->
-	<div class="flex flex-row min-h-screen justify-center">
-		<slot />
-	</div>
+<div class="bg-slate-200">
+	<slot />
 
 	<!-- Side buttons -->
-	<ul class="fixed top-1/2 menu menu-vertical justify-center bg-sky-800 text-slate-50 rounded-r-box">
+	<ul
+		class="fixed top-1/2 menu menu-vertical justify-center bg-sky-800 text-slate-50 rounded-r-box"
+	>
 		<li class="hover:bg-sky-200 hover:text-slate-900">
 			<a href="https://www.linkedin.com/in/mrogge/">
 				<svg
