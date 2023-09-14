@@ -6,10 +6,12 @@
 	import ContactForm from './ContactForm.svelte';
 </script>
 
-<div>
+<div class="bg-[url('/src/lib/img/winter-city-view.png')] bg-fixed bg-[length:1030px] lg:bg-[length:1500px] bg-no-repeat bg-top">
 	<Header />
-	<GeneralInfoSection />
-	<SkillsSection />
-	<!-- <ProjectSection /> -->
-	<!-- <ContactForm />  -->
+	<div class="bg-slate-200">
+		<GeneralInfoSection />
+		<SkillsSection />
+		<!-- <ProjectSection /> -->
+		<!-- <ContactForm />  -->
+	</div>
 </div>
