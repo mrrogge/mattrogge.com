@@ -6,9 +6,9 @@
 	import ContactForm from './ContactForm.svelte';
 </script>
 
-<div class="bg-[url('/src/lib/img/winter-city-view.png')] bg-fixed bg-[length:1030px] lg:bg-[length:1500px] bg-no-repeat bg-top">
+<div class="bg-[url('src/lib/img/pump-room.jpg')] bg-fixed bg-cover backdrop-blur-lg bg-no-repeat bg-top">
 	<Header />
-	<div class="bg-slate-200">
+	<div class="pl-8 pr-8">
 		<GeneralInfoSection />
 		<SkillsSection />
 		<!-- <ProjectSection /> -->
