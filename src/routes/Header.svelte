@@ -1,11 +1,13 @@
 <script lang="ts">
+	import { Styles } from "../styles";
+
 </script>
 
 <div
-	class="flex flex-row justify-center pt-6 pb-6 lg:pt-12 lg:pb-12"
+	class="h-screen flex flex-col justify-center items-center"
 >
 	<div
-		class="flex flex-row justify-center backdrop-brightness-110 backdrop-blur-sm drop-shadow-2xl rounded-2xl p-4 lg:p-8"
+		class={`flex flex-row justify-center min-w-[50%] backdrop-blur-sm drop-shadow-2xl rounded-2xl pt-20 pb-20 pl-8 pr-8 ${Styles.panelGradient}`}
 	>
 		<div class="text-7xl lg:text-9xl align-text-top font-extralight">I'M</div>
 		<div class="flex flex-col justify-between pt-1 lg:pt-4">
