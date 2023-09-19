@@ -4,6 +4,7 @@
 	import SkillSelector from './SkillSelector.svelte';
 	import GracoLogo from '$lib/img/graco_logo.svg';
 	import ProjectCard from './ProjectCard.svelte';
+	import { Styles } from '../styles';
 
 	let selectedSkill: 1 | 2 | 3 = 3;
 
@@ -37,16 +38,16 @@
 	] as const;
 </script>
 
-<div class="p-16 pt-6 mt-1 flex flex-col gap-6 border bg-zinc-100 rounded-md text-slate-600">
+<div class={`relative p-6 pt-6 mt-1 flex flex-col gap-6 border rounded-xl text-slate-600 ${Styles.panelGradient} ${Styles.text1}`}>
 	<p class="text-4xl font-semibold text-center w-1/3">SKILLS</p>
-	<div class="md:hidden max-w-[450px]">
+	<div class="md:hidden max-w-[450px] sticky top-0 rounded-xl bg-zinc-50">
 		<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
 	</div>
 	<div class="flex flex-row justify-between align-top gap-12 min-h-[575px]">
 		<div class="hidden md:block w-1/3 ">
 			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
 		</div>
-		<div class="w-2/3">
+		<div class="md:w-2/3">
 			<div class="flex flex-col gap-4">
 				{#if selectedSkill === 1}
 				<div class="flex flex-col gap-4">
