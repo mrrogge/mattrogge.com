@@ -2,15 +2,11 @@
 	import { browser } from '$app/environment';
 </script>
 
-{#if browser}
-	<script src="https://web3forms.com/client/script.js" async defer></script>
-{/if}
-
 <div class="flex flex-col items-center">
 	<div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md drop-shadow-sm">
 		<div class="text-center text-2xl font-bold m-2">Got questions? Let's get in touch.</div>
 		<div class="m-7">
-			<form action="https://api.web3forms.com/submit" method="POST" id="form">
+			<form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
 				<input type="hidden" name="access_key" value="b16e2f27-1031-41f6-a36d-5a12b11316cf" />
 				<input type="hidden" name="subject" value="New Submission from mattrogge.com" />
 				<input type="hidden" name="redirect" value="https://web3forms.com/success" />
@@ -58,9 +54,6 @@
 						class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-sky-200 focus:border-sky-300"
 						required
 					/>
-				</div>
-				<div class="flex flex-row justify-center m-2">
-					<div class="h-captcha" data-captcha="true" />
 				</div>
 				<div class="mb-6">
 					<button
