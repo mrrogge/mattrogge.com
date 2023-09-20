@@ -8,6 +8,7 @@
 	const skillMatrixY2 = (2 / 3) * skillMatrixHeight;
 	const skillMatrixX2 =
 		skillMatrixY2 / Math.tan(Math.PI / 2 - Math.atan(skillMatrixX1 / skillMatrixHeight));
+	const gap = 1;
 </script>
 
 <div class="p-2">
@@ -21,7 +22,7 @@
 		<path
 			class=" fill-slate-600 [&.skillSelected]:fill-rose-400 hover:fill-rose-200"
 			class:skillSelected={selectedSkill === 1}			
-			d={`M 0 0 L ${skillMatrixX1-1} ${skillMatrixHeight} L 0 ${skillMatrixHeight} L 0 0`}
+			d={`M 0 0 L ${skillMatrixX1} ${skillMatrixHeight} L 0 ${skillMatrixHeight} L 0 0`}
 			on:click={() => onSelect(1)}
 			on:keydown={() => onSelect(1)}
 		/>
@@ -46,7 +47,7 @@
 		<path
 			class="fill-slate-600 [&.skillSelected]:fill-teal-400 hover:fill-teal-200"
 			class:skillSelected={selectedSkill === 2}
-			d={`M 1 0 L ${skillMatrixWidth} 0 L ${skillMatrixX2+1} ${skillMatrixY2} L 1 0 `}
+			d={`M ${gap} 0 L ${skillMatrixWidth} 0 L ${skillMatrixX2+gap} ${skillMatrixY2} L ${gap} 0 `}
 			on:click={() => onSelect(2)}
 			on:keydown={() => onSelect(2)}
 		/>
@@ -62,7 +63,7 @@
 		<path
 			class="fill-slate-600 hover:fill-blue-200 [&.skillSelected]:fill-blue-400"
 			class:skillSelected={selectedSkill === 3}
-			d={`M ${skillMatrixWidth} 1 L ${skillMatrixX2+1} ${skillMatrixY2+1} L ${skillMatrixX1+1} ${skillMatrixHeight} L ${skillMatrixWidth} ${skillMatrixHeight} L ${skillMatrixWidth} 1`}
+			d={`M ${skillMatrixWidth} ${gap} L ${skillMatrixX2+gap*3/2} ${skillMatrixY2+gap/2} L ${skillMatrixX1+gap} ${skillMatrixHeight} L ${skillMatrixWidth} ${skillMatrixHeight} L ${skillMatrixWidth} ${gap}`}
 			on:click={() => onSelect(3)}
 			on:keydown={() => onSelect(3)}
 		/>
