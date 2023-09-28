@@ -4,7 +4,7 @@
 </script>
 
 <div class={`p-16 mt-1 flex flex-col gap-2 ${Styles.panelGradient} rounded-md`}>
-	<p class="text-4xl w-1/4 text-center font-semibold">PROJECTS / ACHIEVEMENTS</p>
+	<p class="text-4xl w-1/4 text-center font-semibold">EXPERIENCE</p>
 	<ProjectCard>
 		<div slot="image" class="flex flex-col">
 			<img src="src/lib/img/graco_logo.svg" alt="Graco logo" />
@@ -62,6 +62,22 @@
 				Coordinated project with customer during their facility relocation and ERP migration.
 			</li>
 		</ul>
+	</div>
+	</ProjectCard>
+	<ProjectCard>
+		<div slot="image">
+			<div class="text-3xl font-extrabold text-center">Toastmasters, Inc.</div>
+			<div class="text-2xl font-bold text-center">PUMPernickel Club</div>
+		</div>
+		<div>
+			<ul class="list-disc list-inside">
+				<li>
+					Serving as Sergeant-at-Arms officer for 3 years running. This role involves facilitating weekly meetings for both in-person and remote members.
+				</li>
+				<li>
+					Working towards the Presentation Mastery Pathway (currently Level 2). Through this project, I've honed my public speaking ability by delivering 9 total speeches.
+				</li>
+			</ul>
 	</div>
 	</ProjectCard>
 </div>
