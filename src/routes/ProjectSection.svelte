@@ -7,7 +7,7 @@
 	<p class="text-4xl w-1/4 text-center font-semibold">EXPERIENCE</p>
 	<ProjectCard>
 		<div slot="image" class="flex flex-col">
-			<img src="src/lib/img/graco_logo.svg" alt="Graco logo" />
+			<img src="graco_logo.svg" alt="Graco logo" />
 			<div class="text-2xl text-center">Industrial SDKs</div>
 		</div>
 		<ul class="list-disc list-inside">
@@ -34,7 +34,7 @@
 	</ProjectCard>
 	<ProjectCard>
 		<div slot="image" class="flex flex-col">
-			<img src="src/lib/img/graco_logo.svg" alt="Graco logo" />
+			<img src="graco_logo.svg" alt="Graco logo" />
 			<div class="text-xl text-center">CEO Award Winner 2021</div>
 		</div>
 		<div>

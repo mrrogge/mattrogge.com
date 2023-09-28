@@ -107,7 +107,7 @@
 					<div class="flex flex-row justify-center bg-zinc-50 drop-shadow-sm border rounded-lg p-6 gap-12">
 						<div class="">
 							<img
-								src="src/lib/img/gtrack-graph.png"
+								src="gtrack-graph.png"
 								class="h-[25rem]"
 								alt="screenshot of Graco Tracking mobile application"
 							/>
@@ -115,14 +115,14 @@
 						<div class="flex flex-col gap-4">
 							<div>
 								<img
-									src="src/lib/img/2k-hmi-controls.png"
+									src="2k-hmi-controls.png"
 									class="h-[12rem]"
 									alt="screenshot of Graco 2K HMI application"
 								/>
 							</div>
 							<div>
 								<img
-									src="src/lib/img/the-glue-recursive.png"
+									src="the-glue-recursive.png"
 									class="h-[12rem]"
 									alt="recursive screenshot of this website"
 								/>
