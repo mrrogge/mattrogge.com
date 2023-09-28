@@ -44,7 +44,7 @@
 >
 	<p class="text-4xl font-semibold text-center w-1/3">SKILLS</p>
 	<div class="md:hidden max-w-[450px] sticky top-0 rounded-xl bg-zinc-50 z-10">
-		<div class="bg-zinc-100 drop-shadow-lg rounded-xl p-10">
+		<div class="bg-zinc-100 drop-shadow-lg rounded-xl p-1">
 			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
 		</div>
 	</div>
