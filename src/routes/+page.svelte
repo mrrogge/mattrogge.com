@@ -11,7 +11,7 @@
 	<div class="pl-8 pr-8">
 		<GeneralInfoSection />
 		<SkillsSection />
-		<!-- <ProjectSection /> -->
-		<!-- <ContactForm />  -->
+		<ProjectSection />
+		<ContactForm /> 
 	</div>
 </div>
