@@ -43,7 +43,7 @@
 	class={`relative p-6 pt-6 mt-1 flex flex-col gap-6 border rounded-xl text-slate-600 ${Styles.panelGradient} ${Styles.text1}`}
 >
 	<p class="text-4xl font-semibold text-center w-1/3">SKILLS</p>
-	<div class="md:hidden max-w-[450px] sticky top-0 rounded-xl bg-zinc-50">
+	<div class="md:hidden max-w-[450px] sticky top-0 rounded-xl bg-zinc-50 z-10">
 		<div class="bg-zinc-100 drop-shadow-lg rounded-xl p-10">
 			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
 		</div>
