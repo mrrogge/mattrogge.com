@@ -15,7 +15,7 @@
     $: state = 'typing';
     $: showCursor = false;
     let cursorInterval: NodeJS.Timeout | null = null;
-    $: borderColorClass = showCursor ? "border-white" : "border-transparent";
+    $: borderColorClass = showCursor ? "border-orange-600" : "border-transparent";
 
     onMount(() => {
         updateInterval = setInterval(() => {
@@ -88,6 +88,6 @@
 
 </script>
 
-<span class:border-white={showCursor} class={`inline min-w-[4px] border-r-4 ${borderColorClass}`}>
+<span class={`inline min-w-[4px] border-r-2 ${borderColorClass}`}>
     {"\u200b"}{currentString}
 </span>
