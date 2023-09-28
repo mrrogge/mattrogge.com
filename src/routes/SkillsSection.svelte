@@ -2,9 +2,10 @@
 	import type { SkillEntry } from '../skills';
 	import SkillBadge from './SkillBadge.svelte';
 	import SkillSelector from './SkillSelector.svelte';
-	import GracoLogo from '$lib/img/graco_logo.svg';
-	import ProjectCard from './ProjectCard.svelte';
 	import { Styles } from '../styles';
+	import HmiControlsImg from '$lib/assets/2k-hmi-controls.png';
+	import GTrackImg from '$lib/assets/gtrack-graph.png';
+	import SiteRecursiveImg from '$lib/assets/the-glue-recursive.png';
 
 	let selectedSkill: 1 | 2 | 3 = 1;
 
@@ -107,7 +108,7 @@
 					<div class="flex flex-row justify-center bg-zinc-50 drop-shadow-sm border rounded-lg p-6 gap-12">
 						<div class="">
 							<img
-								src="gtrack-graph.png"
+								src={GTrackImg}
 								class="h-[25rem]"
 								alt="screenshot of Graco Tracking mobile application"
 							/>
@@ -115,14 +116,14 @@
 						<div class="flex flex-col gap-4">
 							<div>
 								<img
-									src="2k-hmi-controls.png"
+									src={HmiControlsImg}
 									class="h-[12rem]"
 									alt="screenshot of Graco 2K HMI application"
 								/>
 							</div>
 							<div>
 								<img
-									src="the-glue-recursive.png"
+									src={SiteRecursiveImg}
 									class="h-[12rem]"
 									alt="recursive screenshot of this website"
 								/>

@@ -6,7 +6,7 @@
 	import ContactForm from './ContactForm.svelte';
 </script>
 
-<div class="bg-[url('pump-room.jpg')] bg-fixed bg-cover backdrop-blur-lg bg-no-repeat bg-top">
+<div class={`bg-[url("$lib/assets/pump-room.jpg")] bg-fixed bg-cover backdrop-blur-lg bg-no-repeat bg-top`}>
 	<Header />
 	<div class="pl-8 pr-8">
 		<GeneralInfoSection />

@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { Styles } from '../styles';
 	import ProjectCard from './ProjectCard.svelte';
+	import GracoLogoImg from '$lib/assets/graco_logo.svg';
 </script>
 
 <div class={`p-16 mt-1 flex flex-col gap-2 ${Styles.panelGradient} rounded-md`}>
 	<p class="text-4xl w-1/4 text-center font-semibold">EXPERIENCE</p>
 	<ProjectCard>
 		<div slot="image" class="flex flex-col">
-			<img src="graco_logo.svg" alt="Graco logo" />
+			<img src={GracoLogoImg} alt="Graco logo" />
 			<div class="text-2xl text-center">Industrial SDKs</div>
 		</div>
 		<ul class="list-disc list-inside">
@@ -34,7 +35,7 @@
 	</ProjectCard>
 	<ProjectCard>
 		<div slot="image" class="flex flex-col">
-			<img src="graco_logo.svg" alt="Graco logo" />
+			<img src={GracoLogoImg} alt="Graco logo" />
 			<div class="text-xl text-center">CEO Award Winner 2021</div>
 		</div>
 		<div>

@@ -1,6 +1,9 @@
+<script lang="ts">
+    import MattRoggeProfileImg from '$lib/assets/matt-rogge-profile.jpg';
+</script>
 <div>
     <img
-        src="matt-rogge-profile.jpg"
+        src={MattRoggeProfileImg}
         class="rounded-full"
         alt="Matt Rogge"
     />
