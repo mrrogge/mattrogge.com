@@ -8,7 +8,6 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="32"
-				height="auto"
 				fill="currentColor"
 				viewBox="0 0 16 16"
 			>
@@ -23,7 +22,6 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="32"
-				height="auto"
 				fill="currentColor"
 				class="bi bi-github"
 				viewBox="0 0 16 16"
