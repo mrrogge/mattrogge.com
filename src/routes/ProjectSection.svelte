@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { Styles } from '../styles';
 	import ProjectCard from './ProjectCard.svelte';
 </script>
 
-<div class="p-16 mt-1 flex flex-col gap-2 border bg-zinc-100 rounded-md">
+<div class={`p-16 mt-1 flex flex-col gap-2 ${Styles.panelGradient} rounded-md`}>
 	<p class="text-4xl w-1/4 text-center font-semibold">PROJECTS / ACHIEVEMENTS</p>
 	<ProjectCard>
 		<div slot="image" class="flex flex-col">
