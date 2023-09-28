@@ -6,7 +6,7 @@
 	import ProjectCard from './ProjectCard.svelte';
 	import { Styles } from '../styles';
 
-	let selectedSkill: 1 | 2 | 3 = 3;
+	let selectedSkill: 1 | 2 | 3 = 1;
 
 	const industrialSkills: readonly SkillEntry[] = [
 		{ desc: 'PLC programming', level: 'EXPERT' },
@@ -41,11 +41,15 @@
 <div class={`relative p-6 pt-6 mt-1 flex flex-col gap-6 border rounded-xl text-slate-600 ${Styles.panelGradient} ${Styles.text1}`}>
 	<p class="text-4xl font-semibold text-center w-1/3">SKILLS</p>
 	<div class="md:hidden max-w-[450px] sticky top-0 rounded-xl bg-zinc-50">
-		<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
+		<div class="bg-zinc-100 drop-shadow-lg rounded-xl p-10">
+			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
+			</div>
 	</div>
 	<div class="flex flex-row justify-between align-top gap-12 min-h-[575px]">
 		<div class="hidden md:block w-1/3 ">
-			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
+			<div class="bg-zinc-100 drop-shadow-lg rounded-xl p-1">
+				<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
+			</div>
 		</div>
 		<div class="md:w-2/3">
 			<div class="flex flex-col gap-4">
@@ -60,7 +64,7 @@
 					<p>
 						I've had the pleasure of working on many fascinating industrial systems throughout my
 						career thus far. I strive to cast a wide net, learning about a variety of applications
-						and technologies. Aerospace, adhesive materials, food processing and packaging, fluid
+						and technologies. Past projects have included Aerospace, adhesive materials, food processing and packaging, fluid
 						handling...even pig farming!
 					</p>
 					<p>These are a few of the technologies I'm most familiar with:</p>
@@ -74,13 +78,12 @@
 				<div class="flex flex-col gap-4">
 					<div class="text-2xl font-semibold font-mono">Programming: the pillar</div>
 					<p>
-						Since my early childhood when I started writing BASIC on my mom's computer, I've been
+						Since my early childhood when I started writing BASIC on my parents' home computer, I've been
 						obsessed with programming! There's nothing like solving a complex problem using
 						beautifully-written and well-organized code.
 					</p>
 					<p>
-						My peers have called me a "programming polyglot" due to the many different languages
-						I've explored:
+						I've been called a "programming polyglot" by my peers due to variety of languages I've explored:
 					</p>
 					<div class="flex flex-row flex-wrap gap-4">
 						{#each langs as langEntry}
@@ -92,9 +95,11 @@
 				<div class="flex flex-col gap-4">
 					<div class="text-2xl font-semibold font-serif">Design: the glue</div>
 					<p>
-						Learned through necessity; maintained through passion. While not formally trained in
-						design, I've learned a lot on job designing HMIs, SCADA systems, and web/mobile
-						frontends. My style tends to be pragmatic and <span class="font-mono">functional</span>, but I still like to keep it <span
+						While not formally trained in design, I've learned a lot on the job designing HMIs, SCADA systems, and web/mobile
+						frontends. Through this experience, I developed a passion for crafting creative user interfaces.
+					</p>
+					<p>	
+						My style tends to be pragmatic and <span class="font-mono">functional</span>, but I still like to keep it <span
 							class="inline-block p-2 transform-gpu skew-x-12 -skew-y-3 italic font-mono font-semibold rounded-bl-xl rounded-tr-xl bg-gradient-to-r from-amber-300 to-sky-300 text-slate-950"
 							>fun</span
 						>.
