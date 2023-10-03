@@ -7,7 +7,7 @@
 	import GTrackImg from '$lib/assets/gtrack-graph.png';
 	import SiteRecursiveImg from '$lib/assets/the-glue-recursive.png';
 
-	let selectedSkill: 1 | 2 | 3 = 1;
+	let selectedSkill: 1 | 2 | 3 = 3;
 
 	const industrialSkills: readonly SkillEntry[] = [
 		{ desc: 'PLC programming', level: 'EXPERT' },
@@ -111,30 +111,38 @@
 								>fun</span
 							>.
 						</p>
-						<div
-							class="flex flex-row justify-center bg-zinc-50 drop-shadow-sm border rounded-lg p-6 gap-12"
-						>
-							<div class="">
+						<div class="carousel items-center h-[40lvh] bg-black/20 rounded-lg">
+							<div id="design-example1" class="carousel-item w-full h-full relative flex justify-center">
 								<img
 									src={GTrackImg}
-									class="h-[25rem]"
+									class="h-full bg-zinc-50 p-2 drop-shadow-lg rounded-lg"
 									alt="screenshot of Graco Tracking mobile application"
 								/>
-							</div>
-							<div class="flex flex-col gap-4">
-								<div>
-									<img
-										src={HmiControlsImg}
-										class="h-[12rem]"
-										alt="screenshot of Graco 2K HMI application"
-									/>
+								<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+									<a href="#design-example3" class="btn btn-circle">{"<"}</a>
+									<a href="#design-example2" class="btn btn-circle">{">"}</a>
 								</div>
-								<div>
-									<img
-										src={SiteRecursiveImg}
-										class="h-[12rem]"
-										alt="recursive screenshot of this website"
-									/>
+							</div>
+							<div id="design-example2" class="carousel-item w-full h-full relative flex justify-center">
+								<img
+									src={HmiControlsImg}
+									class="h-full bg-zinc-50 p-2 drop-shadow-lg rounded-lg"
+									alt="screenshot of Graco 2K HMI application"
+								/>
+								<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+									<a href="#design-example1" class="btn btn-circle">{"<"}</a>
+									<a href="#design-example3" class="btn btn-circle">{">"}</a>
+								</div>
+							</div>
+							<div id="design-example3" class="carousel-item w-full h-full relative flex justify-center">
+								<img
+									src={SiteRecursiveImg}
+									class=" bg-zinc-50 p-2 drop-shadow-lg rounded-lg"
+									alt="recursive screenshot of this website"
+								/>
+								<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+									<a href="#design-example2" class="btn btn-circle">{"<"}</a>
+									<a href="#design-example1" class="btn btn-circle">{">"}</a>
 								</div>
 							</div>
 						</div>
