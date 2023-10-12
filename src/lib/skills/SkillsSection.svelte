@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { SkillEntry } from '../skills';
+	import type { SkillEntry } from './skills';
 	import SkillBadge from './SkillBadge.svelte';
 	import SkillSelector from './SkillSelector.svelte';
-	import { Styles } from '../styles';
 	import HmiControlsImg from '$lib/assets/2k-hmi-controls.png';
 	import GTrackImg from '$lib/assets/gtrack-graph.png';
 	import SiteRecursiveImg from '$lib/assets/the-glue-recursive.png';
+	import SectionContainer from '../SectionContainer.svelte';
 
 	let selectedSkill: 1 | 2 | 3 = 3;
 
@@ -28,7 +28,7 @@
 		{ desc: 'lua', level: 'EXPERT' },
 		{ desc: 'C', level: 'INTERMEDIATE' },
 		{ desc: 'C++', level: 'INTERMEDIATE' },
-		{ desc: 'haxe', level: 'INTERMEDIATE' },
+		{ desc: 'haxe', level: 'EXPERT' },
 		{ desc: 'rust', level: 'INTERMEDIATE' },
 		{ desc: 'pascal', level: 'EXPERT' },
 		{ desc: 'bash', level: 'INTERMEDIATE' },
@@ -39,11 +39,9 @@
 	] as const;
 </script>
 
-<div
-	class={`relative p-6 pt-6 mt-1 flex flex-col gap-6 border rounded-xl text-slate-600 ${Styles.panelGradient} ${Styles.text1}`}
->
-	<p class="text-4xl font-semibold text-center w-1/3">SKILLS</p>
-	<div class="md:hidden max-w-[450px] sticky top-0 rounded-xl bg-zinc-50 z-10">
+<SectionContainer class="flex flex-col relative">
+	<p class="sticky md:block top-0 z-20 text-4xl font-semibold text-center w-1/3">SKILLS</p>
+	<div class="md:hidden max-w-[450px] sticky top-16 rounded-xl bg-zinc-50 z-10">
 		<div class="bg-zinc-100 drop-shadow-lg rounded-xl p-1">
 			<SkillSelector {selectedSkill} onSelect={(index) => (selectedSkill = index)} />
 		</div>
@@ -115,7 +113,7 @@
 							<div id="design-example1" class="carousel-item w-full h-full relative flex justify-center">
 								<img
 									src={GTrackImg}
-									class="h-full bg-zinc-50 p-2 drop-shadow-lg rounded-lg"
+									class="object-contain w-full max-w-lg p-2 drop-shadow-lg rounded-lg"
 									alt="screenshot of Graco Tracking mobile application"
 								/>
 								<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -126,7 +124,7 @@
 							<div id="design-example2" class="carousel-item w-full h-full relative flex justify-center">
 								<img
 									src={HmiControlsImg}
-									class="h-full bg-zinc-50 p-2 drop-shadow-lg rounded-lg"
+									class="object-contain w-full max-w-lg p-2 drop-shadow-lg rounded-lg"
 									alt="screenshot of Graco 2K HMI application"
 								/>
 								<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -137,7 +135,7 @@
 							<div id="design-example3" class="carousel-item w-full h-full relative flex justify-center">
 								<img
 									src={SiteRecursiveImg}
-									class=" bg-zinc-50 p-2 drop-shadow-lg rounded-lg"
+									class="object-contain w-full max-w-lg p-2 drop-shadow-lg rounded-lg"
 									alt="recursive screenshot of this website"
 								/>
 								<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -151,4 +149,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</SectionContainer>
