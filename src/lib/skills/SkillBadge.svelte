@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { SkillEntry } from '../skills';
-	import { Styles } from '../styles';
+	import type { SkillEntry } from './skills';
 
 	export let skill: SkillEntry;
 
