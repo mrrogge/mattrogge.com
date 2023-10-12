@@ -1,5 +1,5 @@
 <script>
-	import ProfilePic from '../ProfilePic.svelte';
+	import ProfilePic from './ProfilePic.svelte';
 	import IconClockFill from '../icons/IconClockFill.svelte';
 	import IconGeoAltFill from '../icons/IconGeoAltFill.svelte';
 	import IconMortarboardFill from '../icons/IconMortarboardFill.svelte';

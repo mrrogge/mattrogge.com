@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AnimTypedText from '../AnimTypedText.svelte';
+	import AnimTypedText from './AnimTypedText.svelte';
 	import { Styles } from '../styles';
 
 	const strings = [
