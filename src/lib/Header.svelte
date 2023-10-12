@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AnimTypedText from './AnimTypedText.svelte';
-	import { Styles } from '../styles';
+	import SectionContainer from './SectionContainer.svelte';
 
 	const strings = [
 		'automation',
@@ -15,22 +15,19 @@
 </script>
 
 <div class="h-screen flex flex-col justify-center items-center">
-	<div
-		class={`flex flex-row justify-center min-w-[50%] backdrop-blur-sm drop-shadow-2xl rounded-2xl pt-20 pb-20 pl-8 pr-8 ${Styles.panelGradient}`}
-	>
-		<div class="text-7xl lg:text-9xl align-text-top font-extralight">I'M</div>
-		<div class="flex flex-col justify-between pt-1 lg:pt-4 lg:min-w-[500px]">
+	<SectionContainer class="flex flex-row justify-center items-center min-w-[50%] min-h-[30%] py-8 px-6 gap-0 ">
+		<div class="text-[25vw] lg:text-9xl align-text-top font-extralight min-h-20">I'M</div>
+		<div class="flex-1 flex flex-col justify-center pt-1 lg:pt-4 min-w lg:min-w-[500px] min-h-20">
 			<div class="">
-				<span class="text-2xl lg:text-5xl text-sky-800 font-bold">MATT ROGGE</span>
-				<span class="text-xl lg:text-5xl">.</span>
+				<span class="text-2xl text-[7vw] lg:text-5xl text-sky-800 font-bold">MATT ROGGE.</span>
 			</div>
 			<div class="flex-1 border-t-2 translate-y-1/2 border-slate-600" />
 			<div class="flex flex-col justify-end">
 				<div class="text-lg lg:text-4xl lg:pb-1 min-h-[4rem] lg:min-h-0">
 					all about{' '}
-					<span class="underline text-sky-800 font-bold inline"><AnimTypedText {strings} /></span>.
+					<span class="text-sky-800 font-bold inline"><AnimTypedText {strings} /></span>.
 				</div>
 			</div>
 		</div>
-	</div>
+	</SectionContainer>
 </div>
