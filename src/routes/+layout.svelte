@@ -2,7 +2,7 @@
 	import { writable } from 'svelte/store';
 	import '../app.css';
 	import { setContext } from 'svelte';
-	import SocialLinks from './SocialLinks.svelte';
+	import SocialLinks from '../lib/SocialLinks.svelte';
 
 	const darkModeEnabled = writable(false);
 	setContext('darkModeEnabled', darkModeEnabled);
