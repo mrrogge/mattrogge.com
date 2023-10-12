@@ -3,10 +3,10 @@
 	import IconClockFill from '../icons/IconClockFill.svelte';
 	import IconGeoAltFill from '../icons/IconGeoAltFill.svelte';
 	import IconMortarboardFill from '../icons/IconMortarboardFill.svelte';
-	import { Styles } from '../styles';
+	import SectionContainer from './SectionContainer.svelte';
 </script>
 
-<div class={`flex flex-col items-center gap-4 p-8 lg:p-16 drop-shadow-sm ${Styles.panelGradient} backdrop-blur-sm rounded-xl`}>
+<SectionContainer class="flex flex-col items-center">
 	<div class="lg:hidden w-2/3 max-w-[200px]">
 		<ProfilePic />
 	</div>
@@ -41,4 +41,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</SectionContainer>
