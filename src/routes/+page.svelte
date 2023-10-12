@@ -1,8 +1,8 @@
 <script lang="ts">
 	import GeneralInfoSection from '../lib/GeneralInfoSection.svelte';
 	import Header from '../lib/Header.svelte';
-	import SkillsSection from './SkillsSection.svelte';
-	import ProjectSection from './ProjectSection.svelte';
+	import SkillsSection from '../lib/skills/SkillsSection.svelte';
+	import ProjectSection from '../lib/ProjectSection.svelte';
 	import ContactForm from '../lib/ContactForm.svelte';
 </script>
 
