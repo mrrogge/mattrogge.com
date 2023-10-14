@@ -10,22 +10,25 @@
 		'public speaking',
 		'user experience',
 		'music',
-		'game design',
+		'game design'
 	];
 </script>
 
-<div class="h-screen flex flex-col justify-center items-center">
-	<SectionContainer class="flex flex-row justify-center items-center min-w-[50%] min-h-[30%] py-8 px-6 gap-0 ">
-		<div class="text-[25vw] lg:text-9xl align-text-top font-extralight min-h-20">I'M</div>
-		<div class="flex-1 flex flex-col justify-center pt-1 lg:pt-4 min-w lg:min-w-[500px] min-h-20">
-			<div class="">
-				<span class="text-2xl text-[7vw] lg:text-5xl text-sky-800 font-bold">MATT ROGGE.</span>
-			</div>
-			<div class="flex-1 border-t-2 translate-y-1/2 border-slate-600" />
-			<div class="flex flex-col justify-end">
-				<div class="text-lg lg:text-4xl lg:pb-1 min-h-[4rem] lg:min-h-0">
-					all about{' '}
-					<span class="text-sky-800 font-bold inline"><AnimTypedText {strings} /></span>.
+<div class="h-screen flex flex-row justify-center items-center px-2">
+	<SectionContainer
+		class="flex-1 flex flex-row justify-center items-center max-w-screen-sm min-h-[30%]"
+	>
+		<div class="flex-1 flex flex-row justify-center items-start gap-2">
+			<div class="flex-1 flex flex-col justify-center gap-1">
+				<div class="text-center text-[10vw] leading-[10vw] sm:text-[3.5rem] sm:leading-[3.5rem]">
+					I'm{' '}<span class="inline text-sky-800 font-bold">MATT ROGGE</span>.
+				</div>
+				<div class="border-t translate-y-1/2 border-slate-600" />
+				<div
+					class="text-center text-[7vw] leading-[7vw] sm:text-[2.8rem] sm:leading-[2.8rem]"
+				>
+					I'm all about{' '}
+					<span class="text-sky-800 font-bold block"><AnimTypedText {strings} />.</span>
 				</div>
 			</div>
 		</div>
