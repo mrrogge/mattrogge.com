@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class={`p-6 gap-4 rounded-xl text-slate-600 ${Styles.panelGradient} ${Styles.text1} ${class_}`}
+	class={`p-4 gap-4 rounded-xl text-slate-600 text-md lg:text-lg ${Styles.panelGradient} ${class_}`}
 >
 	<slot />
 </div>
