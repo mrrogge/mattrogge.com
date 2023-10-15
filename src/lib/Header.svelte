@@ -11,7 +11,7 @@
 		'user experience',
 		'music',
 		'game design'
-	];
+	].map(s => `${s}.`);
 </script>
 
 <div class="h-screen flex flex-row justify-center items-center px-2">
@@ -28,7 +28,7 @@
 					class="text-center text-[7vw] leading-[7vw] sm:text-[2.8rem] sm:leading-[2.8rem]"
 				>
 					I'm all about{' '}
-					<span class="text-sky-800 font-bold block"><AnimTypedText {strings} />.</span>
+					<span class="text-sky-800 font-bold block"><AnimTypedText {strings} /></span>
 				</div>
 			</div>
 		</div>
