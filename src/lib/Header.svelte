@@ -25,7 +25,7 @@
 				</div>
 				<div class="border-t translate-y-1/2 border-slate-600" />
 				<div
-					class="text-center text-[7vw] leading-[7vw] sm:text-[2.8rem] sm:leading-[2.8rem]"
+					class="text-center text-[7vw] leading-[8vw] sm:text-[2.8rem] sm:leading-[2.8rem]"
 				>
 					I'm all about{' '}
 					<span class="text-sky-800 font-bold block"><AnimTypedText {strings} /></span>
