@@ -6,7 +6,7 @@
 	const gradientClasses = "bg-gradient-to-b from-zinc-50 to-zinc-300";
 </script>
 
-<div class={`flex flex-row gap-1 ${gradientClasses} drop-shadow-sm rounded-lg pl-1 text-sm lg:text-md`}>
+<div class={`flex flex-row gap-1 rounded-lg pl-1 text-sm lg:text-md border border-zinc-400/50`}>
 	<div class="p-1 font-mono font-semibold">{skill.desc}</div>
 	<div
 		class="border-l border-slate-600 rounded-r-lg p-1 bg-gradient-to-r via-30%"
